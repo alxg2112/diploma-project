@@ -8,13 +8,13 @@ import java.util.Map;
 import static com.alxg2112.diploma.logic.forms.Values.*;
 
 public class AlgebraicNormalFrom {
-    private static final Map<String, String> VALUES_TO_SUMMANDS = createCoefficientsToArgumentsMap();
+    private static final Map<String, String> VALUES_TO_SUMMANDS = createValuesToSummandsMap();
 
     private TruthTable truthTable;
     private Map<String, Boolean> coefficients;
     private List<String> summands;
 
-    private static Map<String, String> createCoefficientsToArgumentsMap() {
+    private static Map<String, String> createValuesToSummandsMap() {
         Map<String, String> valuesToSummandsMap = new HashMap<>();
         valuesToSummandsMap.put(FALSE_FALSE_FALSE, "1");
         valuesToSummandsMap.put(FALSE_FALSE_TRUE, "z");
