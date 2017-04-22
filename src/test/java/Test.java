@@ -2,7 +2,7 @@ import com.alxg2112.diploma.logic.forms.AlgebraicNormalFrom;
 import com.alxg2112.diploma.logic.forms.DisjunctiveNormalForm;
 import com.alxg2112.diploma.logic.forms.TruthTable;
 
-public class TransformBooleanEquations {
+public class Test {
 
     public static void main(String[] args) {
         int[] values = { 1, 0, 1, 1, 0, 1, 0, 1 };
