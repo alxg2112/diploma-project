@@ -27,14 +27,14 @@ public class DisjunctiveNormalForm {
 
     private DisjunctiveNormalForm(TruthTable truthTable) {
         this.truthTable = truthTable;
-        initItems();
+        initSummands();
     }
 
     public static DisjunctiveNormalForm fromTruthTable(TruthTable truthTable) {
         return new DisjunctiveNormalForm(truthTable);
     }
 
-    private void initItems() {
+    private void initSummands() {
         summands = new ArrayList<>();
         for (Map.Entry<String, Boolean> truthTableEntry : truthTable.getTable().entrySet()) {
             String values = truthTableEntry.getKey();

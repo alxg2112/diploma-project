@@ -1,4 +1,5 @@
 import com.alxg2112.diploma.logic.forms.AlgebraicNormalFrom;
+import com.alxg2112.diploma.logic.forms.ConjuctiveNormalForm;
 import com.alxg2112.diploma.logic.forms.DisjunctiveNormalForm;
 import com.alxg2112.diploma.logic.forms.TruthTable;
 
@@ -9,7 +10,10 @@ public class Test {
         TruthTable truthTable = TruthTable.getFromValuesArray(values);
         AlgebraicNormalFrom anf = AlgebraicNormalFrom.getFromTruthTable(truthTable);
         DisjunctiveNormalForm dnf = DisjunctiveNormalForm.fromTruthTable(truthTable);
-        System.out.println(anf);
-        System.out.println(dnf);
+        ConjuctiveNormalForm cnf = ConjuctiveNormalForm.fromTruthTable(truthTable);
+        System.out.printf("Truth table: %n%s", truthTable);
+        System.out.printf("ANF: %s%n", anf);
+        System.out.printf("DNF: %s%n", dnf);
+        System.out.printf("CNF: %s%n", cnf);
     }
 }
