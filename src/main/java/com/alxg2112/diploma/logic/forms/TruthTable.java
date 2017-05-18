@@ -1,10 +1,12 @@
 package com.alxg2112.diploma.logic.forms;
 
+import com.alxg2112.diploma.logic.LogicForm;
+
 import java.util.HashMap;
 import java.util.Map;
 import static com.alxg2112.diploma.logic.forms.Values.*;
 
-public class TruthTable {
+public class TruthTable implements LogicForm {
     private static final int TRUE = 1;
     private static final int FALSE = 0;
     private static final int X_KEY_INDEX = 0;
@@ -31,7 +33,7 @@ public class TruthTable {
         }
     }
 
-    public static TruthTable getFromValuesArray(int[] values) {
+    public static TruthTable fromArray(int[] values) {
         return new TruthTable(values);
     }
 

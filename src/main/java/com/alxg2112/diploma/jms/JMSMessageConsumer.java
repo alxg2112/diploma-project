@@ -29,7 +29,13 @@ public class JMSMessageConsumer {
         consumer = session.createConsumer(destination);
     }
 
-    public Message getMessage() throws JMSException {
-        return consumer.receive(receiveTimeout);
+    public Message receive() {
+        Message message = null;
+        try {
+            message = consumer.receive(receiveTimeout);
+        } catch (JMSException e) {
+            e.printStackTrace();
+        }
+        return message;
     }
 }

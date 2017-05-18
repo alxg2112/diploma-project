@@ -1,12 +1,14 @@
 package com.alxg2112.diploma.logic.forms;
 
+import com.alxg2112.diploma.logic.LogicForm;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import static com.alxg2112.diploma.logic.forms.Values.*;
 
-public class DisjunctiveNormalForm {
+public class DisjunctiveNormalForm implements LogicForm {
     private static final Map<String, String> VALUES_TO_SUMMANDS = createCoefficientsToArgumentsMap();
 
     private TruthTable truthTable;

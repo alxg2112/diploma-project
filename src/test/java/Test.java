@@ -7,7 +7,7 @@ public class Test {
 
     public static void main(String[] args) {
         int[] values = { 1, 0, 1, 1, 0, 1, 0, 1 };
-        TruthTable truthTable = TruthTable.getFromValuesArray(values);
+        TruthTable truthTable = TruthTable.fromArray(values);
         AlgebraicNormalFrom anf = AlgebraicNormalFrom.getFromTruthTable(truthTable);
         DisjunctiveNormalForm dnf = DisjunctiveNormalForm.fromTruthTable(truthTable);
         ConjuctiveNormalForm cnf = ConjuctiveNormalForm.fromTruthTable(truthTable);
